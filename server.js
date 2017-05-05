@@ -1,13 +1,13 @@
 const express = require('express');
-const router = express.Router();
-const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 const {
-    BlogPost
+    BlogPosts
 } = require('./models');
 
 const jsonParser = bodyParser.json();
 const app = express();
 
-app.use(morgan('common'));
+app.get('/', (req, res) => {
+    res.json(BlogPosts.get());
+});
