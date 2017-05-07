@@ -9,14 +9,6 @@ const {
 const jsonParser = bodyParser.json();
 const app = express();
 
-//const post = {
-//id: uuid.v4(),
-//title: title,
-//content: content,
-//author: author,
-//publishDate: publishDate || Date.now()
-//};
-
 BlogPosts.create(
     ["id": "uuid.v4",
     "title": "First Entry",
